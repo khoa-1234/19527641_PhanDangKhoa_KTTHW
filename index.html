@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .navbar-light .navbar-nav .nav-link {
+            color: #537acb;
+        }
+        
+        .form-group label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="container">
+            <div class="row align-items-center bg-light">
+                <div class="col-md-3">
+                    <img src="img/logo.PNG" alt="">
+                </div>
+                <div class="col-md-9 text-center ">
+                    <h3>ĐOÀN THANH NIÊN THÀNH PHỐ HỒ CHÍ MINH</h3>
+                    <h5 class="text-danger">ĐOÀN THANH NIÊN TRƯỜNG ĐẠI HỌC CÔN NGHIỆP THÀNH PHỐ HỒ CHÍ MINH</h5>
+                </div>
+            </div>
+        </header>
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #d9edf7;">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">TRANG CHỦ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ĐOÀN THỂ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">SỰ KIỆN</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    HOẠT ĐỘNG
+                  </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#myModal">ĐĂNG KÝ</a>
+                            <a class="dropdown-item" href="#">THAM GIA</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="img/ngayhoithanhnien.JPG" alt="" class="img-fluid" style="border-radius: 50%;">
+            </div>
+            <div class="col-md-6">
+                <h3 style="color: #bb7f3b;">TIN NỔI BẬT</h3>
+                <div class="box-content" style="background-color: #d9edf7;">
+                    <ol style="list-style-type:upper-roman; color: #537acb">
+                        <li><a href="" class="nav-link">Mùa hè xanh</a></li>
+                        <li><a href="" class="nav-link">Thanh niên tình nguyện</a></li>
+                        <li><a href="" class="nav-link">Tấm lòng vàng</a></li>
+                        <li><a href="" class="nav-link">Hiến máu nhân đạo</a></li>
+                        <li><a href="" class="nav-link">Bảo vệ môi trường sạch</a></li>
+                        <li><a href="" class="nav-link">Thi đua lập thành tích chào mừng 26/3</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h4 class="text-center w-100" style="color: #bb7f3b;">DANH SÁCH ĐĂNG KÝ HOẠT ĐỘNG MÙA HÈ XANH</h4>
+            <div class="col-md-12">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Mã SV</th>
+                            <th>Tên SV</th>
+                            <th>Ngày tham gia</th>
+                            <th>Email</th>
+                            <th>Số điện thoại</th>
+                        </tr>
+                    </thead>
+                    <tbody id="danhSach">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header  ">
+                        <h4 class="modal-title text-center text-danger w-100" id="myModalTitle ">THÔNG TIN ĐĂNG KÍ</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="">
+                            <div class="form-group">
+                                <label for="maSV">Mã sinh viên</label>
+                                <input type="text" class="form-control" id="maSV" placeholder="Mã sinh viên">
+                                <p class="text-danger" id="tbMaSV">*</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="tenSV">Tên sinh viên</label>
+                                <input type="text" class="form-control" id="tenSV" placeholder="Tên sinh viên">
+                                <p class="text-danger" id="tbTenSV">*</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="ngayThamGia">Ngày tham gia</label>
+                                <input type="date" class="form-control" id="ngayThamGia">
+                                <p class="text-danger" id="tbngayThamGia">*</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Email">
+                                <p class="text-danger" id="tbEmail">*</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="sdt">Số điện thoại</label>
+                                <input type="text" class="form-control" id="sdt" placeholder="Số điện thoại">
+                                <p class="text-danger" id="tbSDT">*</p>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="save" type="button" class="btn btn-danger w-100">Lưu</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="container bg-primary ">
+            <div class="row justify-content-end align-items-center text-white p-3">
+                @ 2020-2021 Đoàn thanh niên - Trường đại học Công Nghiệp TP.Hồ Chí Minh
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/app.js"></script>
+
+</html>
